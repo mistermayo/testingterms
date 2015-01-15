@@ -45,11 +45,11 @@ end
   end
   describe(".find") do
     it("returns the word and definition") do
-      test_term = Term.new("cat")
+      test_term = Term.new("cat", "furry")
       test_term.save()
-      test_term2 = Term.new("")
+      test_term2 = Term.new("dog", "saint")
       test_term2.save()
-      expect(Term.find(test_term.id())).to(eq(test_term))
+      expect(Term.find("cat")).to(eq(test_term))
     end
   end
 end

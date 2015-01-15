@@ -30,7 +30,7 @@ class Term
   define_singleton_method(:find) do |identification|
     found_term = nil
     @@terms.each() do |term|
-      if term.id().eql?(identification.to_i())
+      if term.store_word().eql?(identification)
         found_term = term
       end
     end
